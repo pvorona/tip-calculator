@@ -1,0 +1,25 @@
+.RadioLabel {
+  height: 48px;
+  border-radius: 4px;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.125s;
+  transition-property: color, background-color;
+  cursor: pointer;
+  user-select: none;
+}
+
+.RadioInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.RadioLabel.Checked {
+  background-color: hsl(172, 80%, 70%);
+  color: hsl(183, 100%, 15%);
+}

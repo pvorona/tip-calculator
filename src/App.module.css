@@ -1,0 +1,177 @@
+.LogoContainer {
+  text-align: center;
+}
+
+.Logo {
+  margin-bottom: 44px;
+  margin-top: 22px;
+}
+
+.Container {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  max-width: 914px;
+}
+
+@media screen and (min-width: 900px) {
+  .Container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 478px) {
+  .Container {
+    padding: 32px;
+  }
+}
+
+.Controls {
+  padding-block: 16px;
+}
+
+.Label {
+  color: hsl(186, 14%, 43%);
+  margin-bottom: 8px;
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 900px) {
+  .Label {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+}
+
+.Label.Invalid {
+  color: red;
+}
+
+.InputContainer {
+  position: relative;
+}
+
+.Input {
+  width: 100%;
+  height: 50px;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding-block: 0;
+  padding-inline: 16px;
+  transition: outline 0.125s;
+  text-align: center;
+}
+
+.Input.WithIcon {
+  text-align: right;
+  padding-inline-start: 34px;
+}
+
+.Input.Invalid {
+  outline: 2px solid red;
+}
+
+.Input:focus:not(.Invalid) {
+  outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.InputIcon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+}
+
+.TipBlock {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media screen and (min-width: 478px) {
+  .TipBlock {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Result {
+  background: hsl(183, 100%, 15%);
+  color: white;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Reset {
+  margin-top: auto;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+  height: 44px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition-duration: 0.125s;
+  transition-property: background-color, outline;
+  outline: none;
+}
+
+.Reset:hover,
+.Reset:focus-visible {
+  background-color: hsl(172, 80%, 70%);
+}
+
+.Reset:focus-visible {
+  outline: 2px solid hsl(172, 67%, 45%);
+  outline-offset: 2px;
+}
+
+@media screen and (min-width: 478px) {
+  .Reset {
+    min-width: 330px;
+  }
+}
+
+.Row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Row + .Row {
+  margin-block: 20px;
+}
+
+@media screen and (min-width: 478px) {
+  .Row + .Row {
+    margin-block: 40px;
+  }
+}
+
+.Value {
+  color: hsl(172, 67%, 45%);
+  font-size: 32px;
+}
+
+@media screen and (min-width: 478px) {
+  .Value {
+    font-size: 40px;
+  }
+}
+
+.SmallLabel {
+  font-size: 18px;
+}
+
+.MutedLabel {
+  color: hsl(184, 14%, 56%);
+  font-size: 16px;
+  white-space: nowrap;
+}
